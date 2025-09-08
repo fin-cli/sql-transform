@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Sql;
+namespace FP_CLI\SqlTransform\Sql;
 
 interface Dialect {
     const MYSQL = 'mysql';

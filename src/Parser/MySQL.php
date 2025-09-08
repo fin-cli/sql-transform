@@ -1,10 +1,10 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Parser;
+namespace FP_CLI\SqlTransform\Parser;
 
-use WP_CLI\SqlTransform\File;
-use WP_CLI\SqlTransform\Parser;
-use WP_CLI\SqlTransform\Sql;
+use FP_CLI\SqlTransform\File;
+use FP_CLI\SqlTransform\Parser;
+use FP_CLI\SqlTransform\Sql;
 
 final class MySQL implements Parser {
 

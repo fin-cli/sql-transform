@@ -1,10 +1,10 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Tests\File;
+namespace FP_CLI\SqlTransform\Tests\File;
 
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
-use WP_CLI\SqlTransform\File;
+use FP_CLI\SqlTransform\File;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 class PersistedTest extends TestCase
@@ -19,18 +19,18 @@ class PersistedTest extends TestCase
         parent::setUp();
         $directory = [
             'empty-file.sql'     => '',
-            'non-empty-file.sql' => "SELECT * FROM `wp_posts`;\n",
-            'dump.sql'           => "SELECT * FROM `wp_posts`;\n"
-                                    . "INSERT INTO `wp_users` VALUES (1, 'admin');\n"
-                                    . "DROP TABLE `wp_options`;\n",
+            'non-empty-file.sql' => "SELECT * FROM `fp_posts`;\n",
+            'dump.sql'           => "SELECT * FROM `fp_posts`;\n"
+                                    . "INSERT INTO `fp_users` VALUES (1, 'admin');\n"
+                                    . "DROP TABLE `fp_options`;\n",
         ];
         $this->filesystem = vfsStream::setup( 'root', '444', $directory );
 
     }
     /**
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__construct
-     * @covers \WP_CLI\SqlTransform\File\Persisted::has_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__destruct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__construct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::has_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__destruct
      */
     public function testHasNextStatementReturnsFalseOnEmptyFile()
     {
@@ -39,9 +39,9 @@ class PersistedTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__construct
-     * @covers \WP_CLI\SqlTransform\File\Persisted::has_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__destruct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__construct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::has_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__destruct
      */
     public function testHasNextStatementReturnsTrueOnNonEmptyFile()
     {
@@ -50,9 +50,9 @@ class PersistedTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__construct
-     * @covers \WP_CLI\SqlTransform\File\Persisted::get_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__destruct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__construct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::get_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__destruct
      */
     public function testGetNextStatementReturnsEmptyStatementOnEmptyFile()
     {
@@ -61,21 +61,21 @@ class PersistedTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__construct
-     * @covers \WP_CLI\SqlTransform\File\Persisted::get_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__destruct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__construct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::get_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__destruct
      */
     public function testGetNextStatementReturnsNextStatementOnNonEmptyFile()
     {
         $file = new File\Persisted( $this->filesystem->url() . '/non-empty-file.sql' );
-        self::assertEquals( "SELECT * FROM `wp_posts`;\n", $file->get_next_statement() );
+        self::assertEquals( "SELECT * FROM `fp_posts`;\n", $file->get_next_statement() );
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__construct
-     * @covers \WP_CLI\SqlTransform\File\Persisted::has_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::get_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__destruct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__construct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::has_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::get_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__destruct
      */
     public function testHasNextStatementReturnsFalseWhenAtEndOfFile()
     {
@@ -90,10 +90,10 @@ class PersistedTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__construct
-     * @covers \WP_CLI\SqlTransform\File\Persisted::has_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::get_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Persisted::__destruct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__construct
+     * @covers \FP_CLI\SqlTransform\File\Persisted::has_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::get_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Persisted::__destruct
      */
     public function testMultipleStatementsCanBeRetrieved()
     {
@@ -104,9 +104,9 @@ class PersistedTest extends TestCase
         }
         self::assertCount( 3, $statements );
         self::assertEquals( [
-            "SELECT * FROM `wp_posts`;\n",
-            "INSERT INTO `wp_users` VALUES (1, 'admin');\n",
-            "DROP TABLE `wp_options`;\n",
+            "SELECT * FROM `fp_posts`;\n",
+            "INSERT INTO `fp_users` VALUES (1, 'admin');\n",
+            "DROP TABLE `fp_options`;\n",
         ], $statements );
     }
 }

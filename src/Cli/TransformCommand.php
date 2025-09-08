@@ -1,12 +1,12 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Cli;
+namespace FP_CLI\SqlTransform\Cli;
 
 use RuntimeException;
-use WP_CLI\SqlTransform\File;
-use WP_CLI\SqlTransform\Transformer;
-use WP_CLI\SqlTransform\ParserFactory;
-use WP_CLI\SqlTransform\RendererFactory;
+use FP_CLI\SqlTransform\File;
+use FP_CLI\SqlTransform\Transformer;
+use FP_CLI\SqlTransform\ParserFactory;
+use FP_CLI\SqlTransform\RendererFactory;
 
 final class TransformCommand {
 

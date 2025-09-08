@@ -1,9 +1,9 @@
 <?php
 
-namespace WP_CLI\SqlTransform;
+namespace FP_CLI\SqlTransform;
 
 use RuntimeException;
-use WP_CLI\SqlTransform\Sql;
+use FP_CLI\SqlTransform\Sql;
 
 interface Parser {
 

@@ -1,16 +1,16 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Tests;
+namespace FP_CLI\SqlTransform\Tests;
 
-use WP_CLI\SqlTransform\Parser;
-use WP_CLI\SqlTransform\ParserFactory;
-use \WP_CLI\SqlTransform\Sql;
+use FP_CLI\SqlTransform\Parser;
+use FP_CLI\SqlTransform\ParserFactory;
+use \FP_CLI\SqlTransform\Sql;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 class ParserFactoryTest extends TestCase
 {
     /**
-     * @covers \WP_CLI\SqlTransform\ParserFactory::create
+     * @covers \FP_CLI\SqlTransform\ParserFactory::create
      */
     public function testCreateMySQL()
     {
@@ -19,7 +19,7 @@ class ParserFactoryTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\ParserFactory::create
+     * @covers \FP_CLI\SqlTransform\ParserFactory::create
      */
     public function testCreateSQLite()
     {
@@ -28,7 +28,7 @@ class ParserFactoryTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\ParserFactory::create
+     * @covers \FP_CLI\SqlTransform\ParserFactory::create
      */
     public function testCreateThrowsExceptionOnUnsupportedDialect()
     {
@@ -38,7 +38,7 @@ class ParserFactoryTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\ParserFactory::create
+     * @covers \FP_CLI\SqlTransform\ParserFactory::create
      */
     public function testCreateThrowsExceptionOnUnimplementedDialect()
     {

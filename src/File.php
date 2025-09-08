@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_CLI\SqlTransform;
+namespace FP_CLI\SqlTransform;
 
 use RuntimeException;
 

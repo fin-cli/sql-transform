@@ -1,8 +1,8 @@
 <?php
 
-namespace WP_CLI\SqlTransform;
+namespace FP_CLI\SqlTransform;
 
-use WP_CLI\SqlTransform\Sql;
+use FP_CLI\SqlTransform\Sql;
 
 interface Renderer {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace WP_CLI\SqlTransform;
+namespace FP_CLI\SqlTransform;
 
 use InvalidArgumentException;
 use RuntimeException;
@@ -8,7 +8,7 @@ use RuntimeException;
 /**
  * Factory for creating SQL renderers.
  *
- * @package WP_CLI\SqlTransform
+ * @package FP_CLI\SqlTransform
  */
 final class RendererFactory {
 

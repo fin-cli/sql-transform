@@ -1,16 +1,16 @@
 {
-    "name": "wp-cli/sql-transform",
+    "name": "fp-cli/sql-transform",
     "description": "Transforms to import/export/dump SQL across multiple dialects",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "WP_CLI\\SqlTransform\\": "src/"
+            "FP_CLI\\SqlTransform\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WP_CLI\\SqlTransform\\Tests\\": "tests/"
+            "FP_CLI\\SqlTransform\\Tests\\": "tests/"
         }
     
     },

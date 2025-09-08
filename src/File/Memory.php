@@ -1,8 +1,8 @@
 <?php
 
-namespace WP_CLI\SqlTransform\File;
+namespace FP_CLI\SqlTransform\File;
 
-use WP_CLI\SqlTransform\File;
+use FP_CLI\SqlTransform\File;
 
 final class Memory implements File {
 

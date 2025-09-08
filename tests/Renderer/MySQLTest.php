@@ -1,15 +1,15 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Tests\Renderer;
+namespace FP_CLI\SqlTransform\Tests\Renderer;
 
-use WP_CLI\SqlTransform\Renderer;
-use WP_CLI\SqlTransform\Sql;
+use FP_CLI\SqlTransform\Renderer;
+use FP_CLI\SqlTransform\Sql;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 class MySQLTest extends TestCase
 {
     /**
-     * @covers \WP_CLI\SqlTransform\Renderer\MySQL::render
+     * @covers \FP_CLI\SqlTransform\Renderer\MySQL::render
      */
     public function testRenderWithSingleStatement()
     {
@@ -19,7 +19,7 @@ class MySQLTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\Renderer\MySQL::render
+     * @covers \FP_CLI\SqlTransform\Renderer\MySQL::render
      */
     public function testRenderWithMultipleStatements()
     {
@@ -37,7 +37,7 @@ class MySQLTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\Renderer\MySQL::render
+     * @covers \FP_CLI\SqlTransform\Renderer\MySQL::render
      */
     public function testRenderWithMultipleStatementsAndExtraWhitespace()
     {
@@ -55,7 +55,7 @@ class MySQLTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\Renderer\MySQL::render
+     * @covers \FP_CLI\SqlTransform\Renderer\MySQL::render
      */
     public function testRenderWithUnknownStatement()
     {

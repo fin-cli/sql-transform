@@ -1,9 +1,9 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Renderer;
+namespace FP_CLI\SqlTransform\Renderer;
 
-use WP_CLI\SqlTransform\Renderer;
-use WP_CLI\SqlTransform\Sql;
+use FP_CLI\SqlTransform\Renderer;
+use FP_CLI\SqlTransform\Sql;
 
 final class MySQL implements Renderer {
 

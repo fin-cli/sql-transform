@@ -1,15 +1,15 @@
 <?php
 
-namespace WP_CLI\SqlTransform\Tests\File;
+namespace FP_CLI\SqlTransform\Tests\File;
 
-use WP_CLI\SqlTransform\File;
+use FP_CLI\SqlTransform\File;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 class MemoryTest extends TestCase
 {
     /**
-     * @covers \WP_CLI\SqlTransform\File\Memory::__construct
-     * @covers \WP_CLI\SqlTransform\File\Memory::has_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Memory::__construct
+     * @covers \FP_CLI\SqlTransform\File\Memory::has_next_statement
      */
     public function testHasNextStatementReturnsFalseOnEmptyFile()
     {
@@ -18,24 +18,24 @@ class MemoryTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Memory::__construct
-     * @covers \WP_CLI\SqlTransform\File\Memory::has_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Memory::__construct
+     * @covers \FP_CLI\SqlTransform\File\Memory::has_next_statement
      */
     public function testHasNextStatementReturnsTrueOnNonEmptyFile()
     {
-        $sql = 'SELECT * FROM `wp_posts`;';
+        $sql = 'SELECT * FROM `fp_posts`;';
         $file = new File\Memory( $sql );
         self::assertTrue( $file->has_next_statement() );
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Memory::__construct
-     * @covers \WP_CLI\SqlTransform\File\Memory::has_next_statement
-     * @covers \WP_CLI\SqlTransform\File\Memory::get_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Memory::__construct
+     * @covers \FP_CLI\SqlTransform\File\Memory::has_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Memory::get_next_statement
      */
     public function testHasNextStatementReturnsFalseWhenAtEndOfFile()
     {
-        $sql = 'SELECT * FROM `wp_posts`; SELECT * FROM `wp_users`; ';
+        $sql = 'SELECT * FROM `fp_posts`; SELECT * FROM `fp_users`; ';
         $file = new File\Memory( $sql );
         self::assertTrue( $file->has_next_statement() );
         $file->get_next_statement();
@@ -45,12 +45,12 @@ class MemoryTest extends TestCase
     }
 
     /**
-     * @covers \WP_CLI\SqlTransform\File\Memory::__construct
-     * @covers \WP_CLI\SqlTransform\File\Memory::get_next_statement
+     * @covers \FP_CLI\SqlTransform\File\Memory::__construct
+     * @covers \FP_CLI\SqlTransform\File\Memory::get_next_statement
      */
     public function testGetNextStatement()
     {
-        $sql = 'SELECT * FROM `wp_posts`;';
+        $sql = 'SELECT * FROM `fp_posts`;';
         $file = new File\Memory( $sql );
         self::assertSame( $sql, $file->get_next_statement() );
     }
