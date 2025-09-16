@@ -1,6 +1,6 @@
 <?php
 
-namespace FP_CLI\SqlTransform;
+namespace FIN_CLI\SqlTransform;
 
 use RuntimeException;
 

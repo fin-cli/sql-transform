@@ -1,8 +1,8 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Sql\Statement;
+namespace FIN_CLI\SqlTransform\Sql\Statement;
 
-use FP_CLI\SqlTransform\Sql\Statement;
+use FIN_CLI\SqlTransform\Sql\Statement;
 
 final class Generic implements Statement {
     /**

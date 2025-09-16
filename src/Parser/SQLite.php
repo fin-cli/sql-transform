@@ -1,10 +1,10 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Parser;
+namespace FIN_CLI\SqlTransform\Parser;
 
-use FP_CLI\SqlTransform\File;
-use FP_CLI\SqlTransform\Parser;
-use FP_CLI\SqlTransform\Sql;
+use FIN_CLI\SqlTransform\File;
+use FIN_CLI\SqlTransform\Parser;
+use FIN_CLI\SqlTransform\Sql;
 
 final class SQLite implements Parser {
 

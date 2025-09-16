@@ -1,12 +1,12 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Cli;
+namespace FIN_CLI\SqlTransform\Cli;
 
 use RuntimeException;
-use FP_CLI\SqlTransform\File;
-use FP_CLI\SqlTransform\Transformer;
-use FP_CLI\SqlTransform\ParserFactory;
-use FP_CLI\SqlTransform\RendererFactory;
+use FIN_CLI\SqlTransform\File;
+use FIN_CLI\SqlTransform\Transformer;
+use FIN_CLI\SqlTransform\ParserFactory;
+use FIN_CLI\SqlTransform\RendererFactory;
 
 final class TransformCommand {
 

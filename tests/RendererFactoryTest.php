@@ -1,16 +1,16 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Tests;
+namespace FIN_CLI\SqlTransform\Tests;
 
-use FP_CLI\SqlTransform\Renderer;
-use FP_CLI\SqlTransform\RendererFactory;
-use \FP_CLI\SqlTransform\Sql;
+use FIN_CLI\SqlTransform\Renderer;
+use FIN_CLI\SqlTransform\RendererFactory;
+use \FIN_CLI\SqlTransform\Sql;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 class RendererFactoryTest extends TestCase
 {
     /**
-     * @covers \FP_CLI\SqlTransform\RendererFactory::create
+     * @covers \FIN_CLI\SqlTransform\RendererFactory::create
      */
     public function testCreateMySQL()
     {
@@ -19,7 +19,7 @@ class RendererFactoryTest extends TestCase
     }
 
     /**
-     * @covers \FP_CLI\SqlTransform\RendererFactory::create
+     * @covers \FIN_CLI\SqlTransform\RendererFactory::create
      */
     public function testCreateSQLite()
     {
@@ -28,7 +28,7 @@ class RendererFactoryTest extends TestCase
     }
 
     /**
-     * @covers \FP_CLI\SqlTransform\RendererFactory::create
+     * @covers \FIN_CLI\SqlTransform\RendererFactory::create
      */
     public function testCreateThrowsExceptionOnUnsupportedDialect()
     {
@@ -38,7 +38,7 @@ class RendererFactoryTest extends TestCase
     }
 
     /**
-     * @covers \FP_CLI\SqlTransform\RendererFactory::create
+     * @covers \FIN_CLI\SqlTransform\RendererFactory::create
      */
     public function testCreateThrowsExceptionOnUnimplementedDialect()
     {

@@ -1,16 +1,16 @@
 {
-    "name": "fp-cli/sql-transform",
+    "name": "fin-cli/sql-transform",
     "description": "Transforms to import/export/dump SQL across multiple dialects",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "FP_CLI\\SqlTransform\\": "src/"
+            "FIN_CLI\\SqlTransform\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FP_CLI\\SqlTransform\\Tests\\": "tests/"
+            "FIN_CLI\\SqlTransform\\Tests\\": "tests/"
         }
     
     },

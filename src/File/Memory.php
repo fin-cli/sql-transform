@@ -1,8 +1,8 @@
 <?php
 
-namespace FP_CLI\SqlTransform\File;
+namespace FIN_CLI\SqlTransform\File;
 
-use FP_CLI\SqlTransform\File;
+use FIN_CLI\SqlTransform\File;
 
 final class Memory implements File {
 

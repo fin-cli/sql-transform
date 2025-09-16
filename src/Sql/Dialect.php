@@ -1,6 +1,6 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Sql;
+namespace FIN_CLI\SqlTransform\Sql;
 
 interface Dialect {
     const MYSQL = 'mysql';

@@ -3,7 +3,7 @@
 
 require_once dirname( __DIR__ ) . '/vendor/autoload.php';
 
-use FP_CLI\SqlTransform\Cli\TransformCommand;
+use FIN_CLI\SqlTransform\Cli\TransformCommand;
 
 $command = new TransformCommand( $argv );
 $command->process();

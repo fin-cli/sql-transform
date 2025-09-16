@@ -1,9 +1,9 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Renderer;
+namespace FIN_CLI\SqlTransform\Renderer;
 
-use FP_CLI\SqlTransform\Renderer;
-use FP_CLI\SqlTransform\Sql;
+use FIN_CLI\SqlTransform\Renderer;
+use FIN_CLI\SqlTransform\Sql;
 
 final class SQLite implements Renderer {
 

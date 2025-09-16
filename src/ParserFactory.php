@@ -1,6 +1,6 @@
 <?php
 
-namespace FP_CLI\SqlTransform;
+namespace FIN_CLI\SqlTransform;
 
 use InvalidArgumentException;
 use RuntimeException;
@@ -8,7 +8,7 @@ use RuntimeException;
 /**
  * Factory for creating SQL parsers.
  *
- * @package FP_CLI\SqlTransform
+ * @package FIN_CLI\SqlTransform
  */
 final class ParserFactory {
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace FP_CLI\SqlTransform;
+namespace FIN_CLI\SqlTransform;
 
 use RuntimeException;
-use FP_CLI\SqlTransform\Sql;
+use FIN_CLI\SqlTransform\Sql;
 
 interface Parser {
 

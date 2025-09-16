@@ -1,15 +1,15 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Tests\Renderer;
+namespace FIN_CLI\SqlTransform\Tests\Renderer;
 
-use FP_CLI\SqlTransform\Renderer;
-use FP_CLI\SqlTransform\Sql;
+use FIN_CLI\SqlTransform\Renderer;
+use FIN_CLI\SqlTransform\Sql;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 class SQLiteTest extends TestCase
 {
     /**
-     * @covers \FP_CLI\SqlTransform\Renderer\SQLite::render
+     * @covers \FIN_CLI\SqlTransform\Renderer\SQLite::render
      */
     public function testRenderWithSingleStatement()
     {
@@ -19,7 +19,7 @@ class SQLiteTest extends TestCase
     }
 
     /**
-     * @covers \FP_CLI\SqlTransform\Renderer\SQLite::render
+     * @covers \FIN_CLI\SqlTransform\Renderer\SQLite::render
      */
     public function testRenderWithMultipleStatements()
     {
@@ -38,7 +38,7 @@ class SQLiteTest extends TestCase
 
 
     /**
-     * @covers \FP_CLI\SqlTransform\Renderer\SQLite::render
+     * @covers \FIN_CLI\SqlTransform\Renderer\SQLite::render
      */
     public function testRenderWithMultipleStatementsAndExtraWhitespace()
     {
@@ -56,7 +56,7 @@ class SQLiteTest extends TestCase
     }
 
     /**
-     * @covers \FP_CLI\SqlTransform\Renderer\SQLite::render
+     * @covers \FIN_CLI\SqlTransform\Renderer\SQLite::render
      */
     public function testRenderWithUnknownStatement()
     {

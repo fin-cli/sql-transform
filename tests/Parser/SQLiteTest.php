@@ -1,16 +1,16 @@
 <?php
 
-namespace FP_CLI\SqlTransform\Tests\Parser;
+namespace FIN_CLI\SqlTransform\Tests\Parser;
 
-use FP_CLI\SqlTransform\File;
-use FP_CLI\SqlTransform\Parser;
-use FP_CLI\SqlTransform\Sql;
+use FIN_CLI\SqlTransform\File;
+use FIN_CLI\SqlTransform\Parser;
+use FIN_CLI\SqlTransform\Sql;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 class SQLiteTest extends TestCase
 {
     /**
-     * @covers \FP_CLI\SqlTransform\Parser\SQLite::parse
+     * @covers \FIN_CLI\SqlTransform\Parser\SQLite::parse
      */
     public function testParseSingleStatement()
     {
@@ -18,11 +18,11 @@ class SQLiteTest extends TestCase
         $sql_file   = new File\Memory( 'SELECT * FROM `tableA`;' );
         $statements = $parser->parse( $sql_file );
         self::assertCount( 1, $statements );
-        self::assertInstanceOf( \FP_CLI\SqlTransform\Sql\Statement::class, $statements[0] );
+        self::assertInstanceOf( \FIN_CLI\SqlTransform\Sql\Statement::class, $statements[0] );
     }
 
     /**
-     * @covers \FP_CLI\SqlTransform\Parser\SQLite::parse
+     * @covers \FIN_CLI\SqlTransform\Parser\SQLite::parse
      */
     public function testParseMultipleStatements()
     {
@@ -46,7 +46,7 @@ class SQLiteTest extends TestCase
     }
 
     /**
-     * @covers \FP_CLI\SqlTransform\Parser\SQLite::parse
+     * @covers \FIN_CLI\SqlTransform\Parser\SQLite::parse
      */
     public function testParseMultipleStatementsWithExtraWhitespace()
     {
